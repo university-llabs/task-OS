@@ -1,5 +1,6 @@
 #include <iostream>
 #include "fibonacci.h"
+#include "palindrome.h"
 
 using namespace std;
 
@@ -18,8 +19,18 @@ void demoFibonacci() {
     }
 }
 
+void demoPalindrome() {
+    cout << "\nPalindrome Demo: " << endl;
+    int numbers[] = { 12321, 12345, 1221, -121 };
+    for (int num : numbers) {
+        cout << num << " is palindrome: "
+            << (Palindrome::IsPalindrome(num) ? "true" : "false") << endl;
+    }
+}
+
 int main() {
 
     demoFibonacci();
+    demoPalindrome();
 	return 0;
 }
